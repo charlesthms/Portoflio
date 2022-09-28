@@ -1,0 +1,130 @@
+.projects__grid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+    position: relative;
+    /* max-width: 1000px; */
+}
+
+.h2 {
+    color: var(--light);
+    font-family: 'Calibre';
+    font-size: 2.3rem;
+}
+
+.main__title {
+    display: flex;
+    justify-content: center;
+}
+
+.project__inner {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 50px 0 0;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    height: 100%;
+    background: #1a1720e6;
+    border-radius: .7rem;
+    padding: 2rem 1.75rem;
+    box-shadow: 0 20px 30px -16px #11121a;
+    transition: all .4s ease;
+}
+
+.project__inner:hover {
+    transform: translateY(-7px);
+}
+
+.project__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.folder {
+    color: var(--primary);
+}
+
+.link {
+    display: flex;
+    align-items: center;
+}
+
+.link a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 7px;
+}
+
+.link a:hover svg,
+.link a.ext:hover svg {
+    color: var(--primary);
+}
+
+.link a svg {
+    width: 20px;
+    height: 20px;
+    color: #f3f4f6a1;
+    transition: all .3s ease;
+}
+
+.link a.ext svg {
+    width: 20px;
+    height: 20px;
+    color: #f3f4f6a1;
+    transition: all .3s ease;
+}
+
+
+
+.folder svg {
+    width: 40px;
+    height: 40px;
+}
+
+.project__title {
+    color: var(--txt-overlay-mobile);
+    font-family: 'Calibre-md';
+    font-size: 2rem;
+    transition: all .4s ease;
+}
+
+.project__inner:hover .project__title {
+    color: var(--primary);
+}
+
+.project__description {
+    font-family: 'Calibre-md';
+    font-size: 1.1rem;
+    color: #f3f4f6a1;
+}
+
+.techs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin: 1rem 0;
+    z-index: 2;
+}
+
+.techs>li {
+    font-size: .8rem;
+    margin: 0 0 0.5rem 1rem;
+    color: var(--txt-overlay);
+}
+
+/* ============== RESPONSIVE ============== */
+
+
+@media screen and (max-width: 600px){
+
+    .projects__grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+
+}

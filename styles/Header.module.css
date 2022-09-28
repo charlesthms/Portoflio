@@ -1,0 +1,135 @@
+.header {
+    height: 100vh;
+    padding-top: 5rem;
+    overflow: hidden;
+    color: var(--light);
+}
+
+.header__container {
+    text-align: center;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__btns {
+    margin-top: 4rem;
+    margin-bottom: 10rem;
+}
+
+.model {
+    height: 100%;
+}
+
+.header__socials {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .8rem;
+    left: 0;
+    bottom: 0;
+    font-size: 1.5rem;
+}
+
+.header__socials a {
+    color: var(--light);
+    transition: all .25s cubic-bezier(0.645, 0.054, 0.355, 1);
+}
+
+.header__socials a:hover {
+    color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.header__socials::after {
+    content: "";
+    width: 1px;
+    height: 7rem;
+    background-color: #7d45dc;
+}
+
+.profile {
+    margin-top: 1.5rem;
+    width: auto;
+    height: 30%;
+    border-radius: 50%;
+    box-shadow: 0px 20px 20px -17px #11121a;
+}
+
+.description .text {
+    text-align: center;
+} 
+
+.description .text .sub {
+    font-size: 1rem;
+    margin-top: 2rem;
+}
+
+.name {
+    font-family: 'Calibre';
+    font-size: 4rem;
+    line-height: 4rem;
+    margin-bottom: .5rem;
+}
+
+.caption {
+    font-family: 'Calibre';
+    font-size: 4rem;
+    line-height: 4rem;
+    color: #8b8b8b;
+}
+
+.description .accent {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.main .light {
+    color: rgba(243, 244, 246, 0.64);
+}
+
+
+/* ============== RESPONSIVE ============== */
+
+@media screen and (max-width: 1024px){
+    .header {
+        height: 100vh;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .header {
+        height: 150vh;
+        padding-top: 1rem;
+    }
+
+    .profile {
+        height: 20%;
+    }
+
+    .header__socials {
+        display: none;
+    }
+
+    .header__btns a {
+        margin: .7rem 0;
+    }
+
+    .header__btns {
+        margin-bottom: 3rem;
+    }
+
+    .description .text {
+        text-align: left;
+    }
+
+    .description .text .sub,
+    .description .text .caption  {
+        text-align: left;
+    }
+
+}
